@@ -23,7 +23,7 @@ const DataFetcher = () => {
     return (
         <div>
             {
-               fetching ? datas !== null && <p>{JSON.stringify(datas)}</p> : <p>Loading...</p>
+               fetching ? datas !== null && <p>{JSON.stringify(datas)}</p> : <h1>Loading...</h1>
             }
         </div>
     )
