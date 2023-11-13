@@ -7,6 +7,7 @@ const DataFetcher = () => {
     const [fetching, setFetching] = useState(false);
 
     function fetchData() {
+        setFetching(false);
         axios.get("https://dummyjson.com/products").then((response) => {
             setDatas(response.data);
             setFetching(true);
@@ -22,7 +23,7 @@ const DataFetcher = () => {
     }, [])
 
     return (
-        <div>
+        <div id="root">
             {
                fetching ? datas !== null && <p>{JSON.stringify(datas)}</p> : <h1>Loading...</h1>
             }
