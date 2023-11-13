@@ -4,11 +4,10 @@ import axios from "axios";
 const DataFetcher = () => {
 
     const [datas, setDatas] = useState(null);
-    const [error, setError] = useState(false);
     const [fetching, setFetching] = useState(false);
 
     function fetchData() {
-        axios.get("https://dummyjson/products").then((response) => {
+        axios.get("https://dummyjson.com/products").then((response) => {
             setDatas(response.data);
             setFetching(true);
             console.log(response.data);
