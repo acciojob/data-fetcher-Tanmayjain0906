@@ -23,12 +23,17 @@ const DataFetcher = () => {
     }, [])
 
     return (
-        <div id="root">
+        <div>
+            
             {
-               fetching ? datas !== null && <p>{JSON.stringify(datas)}</p> : <h1>Loading...</h1>
+               fetching ? datas !== null &&  <div id="root">
+                <h1>Data Fetched from API</h1>
+                <p>{JSON.stringify(datas)}</p>
+               </div>: <p>Loading...</p>
             }
         </div>
     )
 }
 
 export default DataFetcher;
+
